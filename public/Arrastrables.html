@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+El usuario puede agrrar y soltar elementos dentro de la pagina con la API de Drag&Drop.
+Para que un elemento sea arrastrable, se establece un atributo draggable como verdadero,
+el codigo que sigue muestra como se debe realizar:
+-->
+<html>
+    <head>
+        <title>Elementos arrastrables</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function allowDrop(ev){
+                ev.preventDefault();
+            }
+            function drag(ev){
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            function  drop(ev){
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </head>
+    <body>
+        <div id="box" ondrop="drop(event)"
+             ondragover="allowDrop(event)"
+             style="border: 1px solid black;
+             width: 200px; height: 200px"></div>
+             
+             <img id="image" src="arbol.jpg" draggable="true"
+                  ondragstart="drag(event)" width="150" height="50" alt=""/>
+    </body>
+</html>
+
+<!--
+Que arrastrar
+Cuando el elemento es arrastrad, el atributo "ondragstart llama a la funcion "drag(event),
+que especifica que imformacion sera arrastrada.
+El metodo data.Tranfer.setData() establece el tipo de dtos y el valor de los datos arrastrados.
+    function drag(ev){
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+-->
+<!--
+Donde soltar
+El evento "ondragover" especifica donde los datos arrastrados pueden ser soltados. Por defecto,
+los datos y elementos no pueden ser soltados en otros elementos. Para permitir soltar datos,
+debemos prevenir el manejo por defeto del evento.
+Esto se hace llamando al metodo "event.preventDefault() para el evento "event". Por eso la
+funcion "drop" y "allowDrop" lo contemplan.
+-->
+<!--
+Al soltar
+Cuando los datos arrastrados se sueltan, ocurre un evento drop, el metodo "preventDefault"
+previene al explorador de manejar los datos con si opcion por defecto la cual es un evento
+"link on drop".
+Los datos arrastrados pueden ser accedidos con el metodo "dataTransfer.getData()". Este
+metodo retornara cualquier dato que fue configurado del mismo tipo en el metodo "setData()".
+Los datos arrastrados son el ID del elemento arrastrado ("image").
+
+Al final, el elemento arrastrado es anexado al elemento soltado con la funcion "appendChild()"
+-->

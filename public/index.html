@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Mi pagina web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var canvas = document.getElementById("canvas1");
+            var ctx = canvas.getContext("2d");
+            ctx.font="bold 22px Tahoma";
+            ctx.textAlign="start";
+            ctx.fillText("inicio", 10, 30);
+            ctx.translate(100, 150);
+            ctx.fillText("Despues de trasladar", 0 ,0);
+            ctx.rotate(1);
+            ctx.fillText("Despues de rotar", 0, 0);
+            ctx.scale(1.5, 4);
+            ctx.fillText("Despues de escalar", 0, 20);
+        </script>
+        
+    </head>
+    <body>
+        <!-- Para los encabezados existen 6 etiquetas distintas, estas no 
+        debe usarse para crear texto en negrita ya que se ocupan para el indexado
+        por parte de los buscadores-->
+        <h1>Este es el encabezado 1</h1>
+        <h2>Este es el encabezado 2</h2>
+        <h3>Este es el encabezado 3</h3>
+        <h4>Este es el encabezado 4</h4>
+        <h5>Este es el encabezado 5</h5>
+        <h6>Este es el encabezado 6</h6>
+        <!--Aqui se puede comentar-->
+        <!--"hr/" se ocupa para poder ingresar una linea horizontal-->
+        <hr/>
+        <!-- Tipos de formato de texto para trabajar -->
+        <p>Esto es un parrafo</p>
+        <p>Cuando se añade un parrafo de manera automatica se añade un salto de linea</p>
+        <p>Esto es un<br/>salto de linea</p>
+        <p>Esto es texto regular</p>
+        <p><b>Texto en negrita</b></p>
+        <p><big>Texto grande</big></p>
+        <p><i>Texto en cursiva</i></p>
+        <p><small>Texto pequeño</small></p>
+        <p><strong>Texto reforzado</strong></p>
+        <p><sub>Texto subindice</sub></p>
+        <p><sup>Texto superindice</sup></p>
+        <p><ins>Texto insertado</ins></p>
+        <p><del>Texto borrado</del></p>
+        <p><em>Texto importante (en cursiva)</em></p>
+        <!-- Atributos de HTML
+        En HTML existen diversos atributos, por ejemplo
+        align="center" alinea el texto hacia el centro -->
+        <p align="center">Este texto esta centrado</p>
+        <!-- Los atributos estan siempre en la etiqueta de
+        apertura y aparecen en parejas de nombre="valor" -->
+        
+        <!-- Los atributos pueden dimensionar cosas, como por ejemplo
+        podemos dimensionar el ancho de una linea con: -->
+        <hr width="50px"/>
+        <!-- Tambien podemos dimensionar con valor porcentual -->
+        <hr width="50%"/>
+        
+        <!-- El atributo align se usa para alinear texto a como 
+        nosotros deseemos, por ejemplo -->
+        <p align="center">Este texto va centrado <br/> </p>
+            <hr width="10%" align="right"/> 
+        <p align="right">Este va alineado a la derecha</p> 
+        
+        <!-- Para añadir una imagen se usa la etiqueta "img" la cual contiene solo
+        atributos y no tiene cierre, para indicar donde esta la imagen se ocupa el
+        atributo "src" como en el ejemplo -->
+        <img src="image.jpg">
+        
+        <!-- En caso de que la imagen no pueda ser mostrada, se ocupa el atributo
+        "alt" para dar una descripcion de la imagen en palabras, como en el ejemplo -->
+        <img src="arbol.jpg" alt="Un arbol en una pradera" >
+        <br/>
+        
+        <!-- El tamaño de la imagen puede ser redefinida con los atributos width (ancho)
+        y height (alto) y estos puede tener valores en pixeles o porcentaje -->
+        <img src="arbol.jpg" alt="Un arbol en una pradera" height="150px" width="150px">
+        <br/>
+        <img src="arbol.jpg" alt="Un arbol en una pradera" height="150%" width="150%">
+        <br/>
+        
+        <!-- Se puede poner un marco en todas las imagenes con el atributo "border" y 
+        un tamaño en pixeles -->
+        <img src="arbol.jpg" alt="Un arbol en una pradera" height="150%" width="150%" border="10px">
+        <br/>
+        
+        <!-- Con la etiqueta "a" se pueden realizar viculos a otros conetnidos, como paginas o 
+        elementos dentro del codigo, con el atributo href se define la direccion de destino del vinculo -->
+        <a href="https://www.facebook.com">Ir a Facebook</a>
+        <br/>
+        <!-- Con el atributo target se puede indicar como abrir el vinculo, puede ser en una ventana
+        nueva o en una pestaña nueva, por ejemplo-->
+        <a href="https://www.google.com.mx" target="_blank">Ir a Google</a>
+        <br/>
+        
+        <!-- Para crear una lista ordenada se ocupa la etiqueta "ol" y cada elemento es indicado
+        la etiqueta "li" -->
+        <ol>
+            <li>Uno</li>
+            <li>Dos</li>
+            <li>Tres</li>
+            <li>Cuatro</li>
+            <li>Cinco</li>
+        </ol>
+        
+        <!-- Para crear una lista sin ordenar se ocupa la etiqueta "ul" y de la misma forma, los
+        elementos con "li" -->
+        <ul>
+            <li>Presidente</li>
+            <li>Senador</li>
+            <li>Diputado</li>
+            <li>Fiscal</li>
+        </ul>
+        
+        <!-- Las tablas en HTML se ocupan con la etiqueta "table" estas son divididas en filas con
+        "tr" y estas en columnas con "td" como en el siguiente ejemplo de 2 filas y 3 columnas -->
+        
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        
+        <!-- A las tablas se le pueden indicar varios atributos entre los cuales se encuentran
+        "border" para marcar un borde en la tabla y el atributo "colspan" la cual indica el
+        tamaño de la celda, por ejemplo colspan="2" indica que esta celda tendra un tamaño
+        de dos celdas -->
+        <table border="2">
+            <tr>
+                <td>Cosa</td>
+                <td>Color</td>
+                <td>Pais</td>
+            </tr>
+            <tr>
+                <td>arbol</td>
+                <td colspan="2">Amarillo</td>
+            </tr>
+        </table>
+        
+        <!-- Para hacer que una celda se expanda hacia otra fila se usa el atributo "rowspan" -->
+        
+        <!-- Otros atributos que s epueden indicar en las tablas son el atributo "align" para
+        indicar la posicion de la tabla y "bgcolor" la cual indica el color de fonde de una celda.
+        Recuerda que en realidad es mejor usar CSS para la cuestion del estilo -->
+        <table border="2" align="center">
+            <tr>
+                <td bgcolor="red">Cosa</td>
+                <td>Color</td>
+                <td>Pais</td>
+            </tr>
+            <tr>
+                <td>arbol</td>
+                <td colspan="2">Amarillo</td>
+            </tr>
+        </table>
+        
+        <!-- Uno de los ultimos atributos que se ocupa es "th" para indicar encabezados en la tabla-->
+        <table>
+            <tr>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+            </tr>
+        </table>
+        
+        <!-- HTML se divide en dos tipos de elementos, los elementos e bloque y los elementos de
+        linea, los elementos de bloque crean un bloque con los elementos dentro, los elementos de
+        lines, son solo eso, lineas. Los elementos bloque junto con CSS son muy utiles pues indican
+        a que parte (bloque) se le aplica algun estilo, como en el siguiente ejemplo -->
+        
+        <!-- El elemento "div" es un elemento de bloque, divide una parte del contenido, y asi 
+        se crea un estilo definido-->
+        <div style="background-color: green; color: white; padding: 20px">
+            <p>Esto es parte del contenido</p>
+            <p>Esto tambien</p>
+        </div>
+        <p>Esto ya no</p>
+        
+        <!-- El elemento "span" es un elemento de linea que se ocupa para contener un texto. Este
+        sirve junto con CSS para darle formato al texto especificamente-->
+        <p>Este es un texto <span style="color: red">importante</span></p>
+        
+        <!-- Los elemento de bloque son: "h1, form, li, ol, ul, p, pre, table, div, etc"
+        Los elementos de linea son: "b, a, strong, img, input, em, span"
+        
+        <!-- Hay elementos que pueden ser usados como de linea o de bloque como: "APPLET, IFRAME,
+        INS, MAP, OBJECT, SCRIPT.-->
+        
+        <!-- Es importane entender que un elemento de bloque puede contener varios elementos de
+        linea, pero un elemento de linea, no puede contener elementos de bloque.-->
+        
+        <!-- Para crear un formulario se ocupa la etiqueta "form" el cual ocupa un atributo action
+        el cual apunta a una paina web que cargara despues de que se envie el formmulario->>
+        
+        <!-- Cuando enviamos un formulario podemos usar el atributo "method" que contiene dos metodos
+        el "GET" y el "POST". Se ocupa GET cuando los datos del formulario seran visibles en la
+        pagina, y se ocupa POST cuando no sea asi, es mejor usar POST por motivos de privacidad.-->
+        
+        <!-- El atributo "name" especifica un nombre para un formulario-->
+        
+        <!-- Para capturar los datos de entrada de los usuarios neceitamos el elemento "input"
+        para los campos de texto. El elemento "input" tiene diferentes variaciones: "text, password,
+        radio, URL, submit, etc." podemos ver todo esto en el siguiente ejemplo: -->
+        
+        <form action="url" method="POST">
+            <input type="text" name="usuario"/><br/>
+            <input type="password" name="contraseña"/><br/>
+            
+            <!-- "radio" evalua una opcion de varias -->
+            <input type="radio" name="genero" value="male"/>Masculino<br/>
+            <input type="radio" name="genero" value="female"/>Femenino<br/>
+            
+            <!-- "checkbx" evalua varias opciones-->
+            <input type="checkbox" name="habilidades" value="1"/>Ser proo<br/>
+            <input type="checkbox" name="habilidades" value="2"/>Ser chingon<br/>
+            <input type="checkbox" name="habilidades" value="3"/>Ser guapo<br/>
+            
+            <!-- "submit" envia el formulario a la direccion en el atributo "action"-->
+            <input type="submit" name="enviar"/><br/>
+        </form>
+        
+        <!-- Los colores en HTML se ocupan en sistema hexadecimal y van antecedidas siempre
+        de un simbolo #, existe un sin fin de colores disponibles los cuales forman parte del
+        sistema RGB. La aplicacion es variada podemos usar los atributos "bgcolor" para un 
+        fondo o "font color="#000000"" para el texto-->
+        
+        <!-- En HTML podemos añadir marcos para un proposito especifico, esto es con "iframe"
+        el cual no es compatible con HTML%, este debe contener "frame" para indicar su contenido
+        para que este espacio no pueda ser modificado se ocupa el atributo "noresize"-->
+        
+        <!--
+        <div class="section">
+            <h2><span>Mi video favorito</span></h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zGEjHsVC1Ks" frameborder="0" allowfullscreen></iframe>
+        </div>
+        -->
+        
+        <!-- HTML5 ocpa una codificacion de caracteres de UTF-8 y eso siemmpre va en el encabezado
+        ademas de la etiqueta "!DOCTYPE HTML".
+         HTML5 añade elementos como "article, aside, audio, canvas, datalist, details, embed, 
+        footer, header, nav, output, progress, section, video y mas"
+         La lista de modelos de contenido se amplio a los siguientes: "Metadata, Embedded (Incrustado),
+        Interactive (Interactivo), Heading (Encabezado), Phrasing (Expresion), Flow (Flujo) y 
+        Sectioning (Seccionamiento)" los cuales hacen mas facil el diseño y ubicacion de contenido 
+        en la pagina. -->
+        
+        <!-- La definicion de cada elemento es:
+        
+        Metadata: Contenio que define la presentacion o comportamieinto del resto del contenido.
+        Estos elementos son encontrados en el "head" (cabecera) del documento. Sus elementos
+        pueden ser: "base, link, meta, noscript, script, style, title".
+        
+        Embedded (Incrustado): Contenido que importa otros recursos al documento. Sus elementos
+        pueden ser: "audio, video, canvas, iframe, img, math, object, svg".
+        
+        Interactive (Interactivo): Contenido especificamente destinado para interaccion del
+        usuario. Sus elementos pueden ser: "a, audio, video, button, details, embed, iframe, img,
+        input, label, object, select, textarea".
+        
+        Heading (Encabezado): Define uun encabezado de seccion. Sus elementos pueden ser: "h1, 
+        h2, h3, h4, h5, h6, hgroup"
+        
+        Phrasing (Expresion): Este modelo tiene un numero de elementos en linea comun con HTML4.
+        Sus elementos pueden ser: "img, span, strong, label, br/, small, sub y mas".
+        
+        Flow (Flujo de contenido: Contiene la mayoria de los elementos HTML5 que serian
+        incluidos en el flujo normal del documento.
+        
+        Sectioning (Seccionamiento de contenido): Define el alcanze de encabezados, contenido,
+        navegacion y pies de pagina. Sus elementos pueden ser: "article, aside, nav, section".-->
+        
+        <!-- La estructura basica de una pagina es:
+                header
+                nav
+                article
+                section
+                footer
+        En el siguiente apartado hay una imagen para explicarlo mejor. Es importante recordar que
+        todo esto es parte del body, y que header es completamente diferente que head.-->
+        <h2>Estructura de una página genéria de HTML5</h2>
+        <img src="estructura-html5.jpg" alt="Diseño de pagina web">
+        
+        <br/>
+        
+        <!-- "header" es usado para indicar un encabezado en la pagina, como en el ejemplo-->
+        <header>
+            <h1>Encabezado mas importante</h1>
+            <h3>Encabezado menos importante</h3>
+        </header>
+        
+        <!-- "footer" es usado para la seccion localizada en la parte inferior de la pagina web.
+        Ahi proporcionamos informacion sobre: informacion de contacto, politicas de privacidad,
+        iconos de redes sociales, terminos de servicio, informacion de derechos de autor
+        mapa del sitio y documentos relacionados. Su etiqueta es como sigue: -->
+        <footer></footer>
+        
+        <!-- "nav" es usada para representar una seccion de una pagina que conecta a otras
+        paginas o ciertas secciones dentro de la pagina. Esto seria una seccion con 
+        hipervinculos de navegacion. Este es un ejemplo de su uso: -->
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        <hr/>
+        <!-- Es importante mencionar que este elemento se debe usar solo para la navegacion, por
+        ejemplo, en el footer normalmente va una lista de hipervinulos pero estos no deben,
+        necesariamente, estar dentro de un nav. -->
+        
+        <!-- "article" es un elemento autonomo de contenido independiente que puede ser usado y
+        distribuido separadamente del resto de la pagina o sitio. Ejemplos podrian ser un widget, 
+        gadget, publicidad, etc. Este elemento remplaza al elemento "div" dde HTML4.-->
+        <article>
+            <h2>El titulo del articulo</h2>
+            <p>Contenidos del elemento articulo</p>
+        </article>
+        <br/>
+        <hr/>
+        
+        <!-- "section" es un contenedor logico de la pagina web o articulo. Las secciones puede ser
+        usadas para dividir contenido dentro de un articulo. Un ejemplo podria ser una pagina
+        principal que tiene una seccion para introducir a la compañia, otra para los items de 
+        noticias y otra tambien para la informacion de contacto.
+        Cada "section" deberia ser identificada con un encabezado "h1 - h6" como un hijo del
+        elemento "section".
+        Si tiene sentido ubicar separadamente el contenido de un elemento "section", use mejor un 
+        elemento "article". -->
+        <article>
+            <h1>Bienvenido</h1>
+            <section>
+                <h1>Encabezado</h1>
+                <p>Contenido o imagen</p>
+            </section>
+        </article>
+        <br/>
+        <hr/>
+        
+        <!-- "aside" es contenido secundario o no tan relevante que podria ser considerado separado
+        pero indirectamente relacionado al contenido principal. Este tipo de contenido es a veces
+        representado en barras laterales. Cuando la etiqueta "aside" es usada dentro de una etiqueda
+        "article" el contenido de "aside" deberia estar especificamnte relacionado a ese articulo. 
+        Cuando la etiqueta "aside" es usada fuera de una etiqueta "article" su contenido deberia
+        estar relacionado al contenido que esta a su alrededor. -->
+        <article>
+            <h1>Regalos para todos</h1>
+            <p>Este sitio web sera el mejor lugar para escocger regalos</p>
+            <aside>
+                <p>Los regalos seran entregados a usted dentro de las siguientes 24 hrs</p>
+            </aside>
+        </article>
+        <br/>
+        <hr/>
+        
+        <!-- Para ingresar audio en una pagina web, se ocupa la etiqueta "audio" y tiene dos formas
+        de especificar la url de origen del audio, la primera es: -->
+        <audio src="audio.mp3" controls="">
+            Elemento de audio no soportado por su explorador
+        </audio>
+        <!-- La segunda es especificar el recurso dentro del elemento con un "source". Dentro de este
+        elemento "source" se pueden enlazar diferentes archivos de audio. El explorados usara el primer
+        formato reconocido, los tres formatos admitidos son: MP3, WAV y OGG-->
+        <audio controls="">
+            <source src="audio.mp3" type="audio/mpeg">
+            <source src="audio.ogg" type="audio/ogg">
+            Elemento de audio no soportado por su explorador
+        </audio>
+        <!-- El texto entre "audio" se mostrara si el explorador no soporta el elemento-->
+        
+        <!-- Los atributos aplicables al elemento "audio" son: 
+            "controls" el cual especifica los controles
+            que deberian ser desplegados (como el boton de play/pause, etc.).
+            "autoplay" El cual indica que el audio empieza a reproducirse enc uanto este listo
+            esto sin preguntar al visitante.-->
+        <audio controls="" autoplay=""></audio>
+            <!--"loop" el cual indica al audio que se reproduzca automaticamente ccuando finalice.-->
+        <audio controls="" loop=""></audio>
+        
+        <!-- El elemento "video" es muy similar al elemento "audio" se declara igual y tiene los mismos
+        "controls", la diferencia es en los formatos, este soporta: MP4, OGG y WebM -->
+        <video controls="" autoplay="" loop="">
+            <source src="video.mp4" type="video/mpeg">
+            <source src="video.ogg" type="video/ogg">
+            Elemento de video no soportado por su explorador
+        </video
+        
+        <!--El elemento "progress" muestra una barra de progreso que junto con JavaScript permite realizar
+        animaciones para especificar el proceso de algun trabajo. Este elemento puede ser usado en cualquier
+        parte del body de la pagina. 
+        Sus atributos son "value" que especifica ccuanto de la tarea ha sido completado y el atributo "max"
+        que especifica cuánto trabajo la tarea requiere en total.-->
+        <progress max="100" value="35"></progress>
+        
+        <!-- HTML5 permite ocupar, junto con JavaScript, una API para almacenar datos en el computador
+        del usuario, esto antes solo se lograba con coockies de JavaScript, pero ahora podemos ocupar dos
+        metodos para realizar esto:
+            "sessionStorage()"
+            "localStorage()"
+        ambos permiten un uso mejor del ancho de banda y una carga mas rapida en posteriores visitas, la
+        diferencia radica en que "sessionStorage()" guarda los datos hasta que el usuario cierra el explorador
+        mientras que "localStorage()" los guarda sin fecha de expiracion. 
+        Su uso de muestra a continuacion: -->
+        <p>
+        <!-- Guardando un valor-->
+        localStorage.setItem("clave1","valor1");
+        <!-- Obteniendo un valor-->
+        alert(localStorage.getItem("clave1");
+        <!-- Removiendo un valor -->
+        localStorage.removeItem("clave1");
+        <!-- Removiendo todos los valores-->
+        localStorage.clear();
+        <!-- Para una sesion se ocupa sessionStorage-->
+        </p>
+        <hr/>
+        
+        <!-- HTML5 junto con JavaScript permiten implementar una API para la GeoLocalizacion la cual obtiene
+        la ubicacion geografica del usuario, esto debe de aprobarlo el usuario. 
+        El metodo proncipal de la API es "getCurrentPosition" y este contiene diferentes parametros:
+            "showLocation" (obligatorio): define el metodo callback que obtineen la informacion de localizacion
+            "ErrorHandler" (opcional): define el metodo callback que es llamado cuando ocurre un error procesando
+            la llamada asincronica.
+            "Options" (opcional): define un conjunto de opciones para obtener la informacion de localizacion.-->
+        navigator.geolocation.getCurrentPosition();
+        <!-- La localizacion del usuario puede ser representada de dos formas: "Geodetic" y "Civic"
+            "geodetic" proporciona latitud y longitud, informacion estadistica.
+            "civic" porporciona un formato que es leido mas facilmente y entendido por la persona promedio
+        Cada parametro tiene una representacion tanto "geodetic" como "civic" -->
+        <table border="2" align="center">
+            <tr>
+                <td>Atributo</td>
+                <td>geodetic</td>
+                <td>civic</td>
+            </tr>
+            <tr>
+                <td>Posicion</td>
+                <td>59.3, 18.6</td>
+                <td>Estocolmo</td>
+            </tr>
+            <tr>
+                <td>Elevacion</td>
+                <td>10 metros</td>
+                <td>4° piso</td>
+            </tr>
+            <tr>
+                <td>Direccion</td>
+                <td>234 grados</td>
+                <td>Centro de la Ciudad</td>
+            </tr>
+            <tr>
+                <td>Velocidad</td>
+                <td>5 km/hr</td>
+                <td>Caminando</td>
+            </tr>
+            <tr>
+                <td>Orientacion</td>
+                <td>45 grados</td>
+                <td>Noreste</td>
+            </tr>
+        </table>
+        
+        <!--
+        Se puede dibujar en HTML5 con el metodo "SGV" el cual se permite dibujar trazos,
+        rectangulos, corculos, texto e imagenes. Para insertar una imagen SVG se hace igual
+        que con cualquiere imagen, con el atributo "img"
+        -->
+        <!-- Dibujar un Circulo
+        Se crea un elemento "svg y se especifica el tamaño de ese elemento, dentro se ocupan
+        etiquetas y atributos, para este caso, la etiqueta "circle" que crea el circulo, los
+        atributos mas usados pueden son:
+        "cx": Mueve el centro de la figura mas a la derecha de la pantalla
+        "cy": Mueve el centro de la figura mas abajo respecto a la parte superior de la pantalla
+        "r" redefine el radio
+        "fill" determina el color de nuestra figura
+        "stroke": Agrega un marco a la figura
+        Veamos el ejemplo:
+        -->
+        <div>
+            <svg width="500" height="500">
+                <circle cx="80px" cy="80px" r="50" fill="green"/>
+            </svg>
+        </div>
+        <!--
+        Otros elementos pueden ser:
+        Rectangulo: con la etiqueta "rect" como sigue
+        -->
+        <div>
+            <svg width="500" height="500">
+                <rect width="300" height="100" x="20" y="20" fill="blue"/>
+            </svg>
+        </div>
+        <!--
+        Linea: con la etiqueta "line" y con coordenadas x1y1 x2y2
+        -->
+        <div>
+            <svg width="500" height="500">
+                <line x1="10" y1="10" x2="200" y2="100"
+                      style="stroke:#000000; stroke-linecap:round; stroke-width:20"/>
+            </svg>
+        </div>
+        <!--
+        Linea doblada: con la etiqueta "polyline" y el atributo "points" donde
+        se indican los puntos donde estara
+        -->
+        <div>
+            <svg width="500" height="500">
+                <polyline points="100 100, 150 150, 200 100"
+                          style="stroke-linejoin:miter; stroke:red; stroke-width:10; fill:none"/>
+            </svg>
+        </div>
+        <!-- Elipse: con la etiqueta "ellipse" y muy similar al elemento circulo usando "cx" y "cy"
+        pero ademas un "rx" y un "ry" para los radios
+        -->
+        <div>
+            <svg width="500" height="500">
+                <ellipse cx="200" cy="100" rx="150" ry="70" fill="red"/>
+            </svg>
+        </div>
+        <!-- Poligono : es usado para crear un grafico con al menos 3 lados. El elemento es unico 
+        ya que cierra automaticamente con undicarle 3 puntos
+        -->
+        <div>
+            <svg width="500" height="500">
+                <polygon points="100 100, 200 200, 300 0" style="fill:purple; troke:black"/>
+            </svg>
+        </div>
+        
+        <!-- Con SVG se pueden crear animaciones de elementos usando al elemento "animate", veamos
+        un ejemplo y despues su explicacion:
+        -->
+        <div>
+            <svg width="500" height="500">
+                <rect width="150" height="150" fill="orange">
+                    <animate attributeName="x" from="0" to="300"
+                             dur="3s" fill="freeze" repeatCount="2"/>
+                </rect>
+            </svg>
+        </div>
+        <!--
+        attributeName: Indica cual atributo sera afectado por la animacioon
+        from: Indica el valor de comienzo del atributo.
+        to: Indica el valor final del atributo.
+        dur: Indica la duracion de la animacion.
+        fill: Indica que ocurre al finalizar, un valor "remove" pone al objeto en su lugar de origen, un
+        valor "freeze" lo deja donde termino.
+        repeatCount: Indica el conteo de repeticiones de la animación, un valor "undefined" repite indefinidamente.
+        -->
+        
+        <!--
+        Trazos: Con SVG podemos indicar trazos dentro de la pagina, para esto usamos la etiqueta "path" y continene
+        los siguientes comandos:
+            M: mover hacia
+            L: linea hacia
+            H: linea horizontal hacia
+            V: línea vertical hacia
+            C: curva hacia
+            S: curva suave hacia
+            Q: curva Béizier cuadrática
+            T: curva Béizier cuadrática suave
+            A: arco elíptico
+            Z: closepath, cerrar trazo
+        Estos comandos pueden ser representados en minnusculas, las cuales indicarian posiciones relativas
+        en mayusculas son posiciones absolutas.
+        -->
+        <div>
+            <svg width="500" height="500">
+                <path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000; fill:none"/>
+            </svg>
+        </div>
+        <!--
+        En este ejemplo, el punto inicia en 0,0 se mueve hacia 200, 200 se mueve hacia 200, 0 y cierra el trazo
+        -->
+        
+        <!--
+        En HTLM5 se ocupa el elemnto "canvas" para dibujar graficos simples y complejos, canvas es en realidad
+        un contenedor para los grafios, un algoritmo JavaScript es el encargado de dibujar realmente la figura
+        El elemento "canvas" debe de tener un atributo "id" para que pueda ser referido por JavaScript
+        El elemento canvas crea un plano que empieza en 0,0 y en donde la cordenada "x" aumente a la derecha y
+        la coordenada "y" aumenta hacia abajo.
+        -->
+        
+        <canvas id="canvas1" width="500" height="500"></canvas>
+       
+        <!--
+        Dentro del canvas se pueden dibujar varios elementos, indicaremos algunos ejemplos:
+        ++ fillRect: Dibuja un rectangulo, por ejemplo, en esta pagina si usamos el codigo
+        ctx.fillRect(20,20,100,100);
+        indicamos que dibuje un cuadrado de 100 x 100 y que empieza a dicbujarlo desde el punto 20, 20
+        ++ fillStyle es usada para establecer un color, gradiente o patron para rellenar el dibujo, por
+        ejemplo, en esta pagina si usamos el codigo
+        ctx.fillStyle="rgba(0,200,0,1)";
+        inidicamos que el cuadrado lo dibuje de color verde
+        ++ Dibujar una linea: 
+            moveTo(x,y): Define el punto de inicio de la linea.
+            lineTo(x,y): Define el punto final de la linea.
+        ++ Dibujar un circulo:
+            beginPath: Inicia el dibujo.
+            arc(x,y,r,start,stop):Establece el parametro del circulo.
+            stroke(): finaliza el dibujo.
+        ++ Gradientes:
+            createLinearGradient(x,y,x1,y1): Crea un gradiente lineal.
+            createRadialGradient(x,y,r,x1,y1,r1): Crea un gradiente radial/circular.
+        ++ Texto sobre el canvas:
+            Font: Define las propiedades de la fuente para el texto.
+            fillText(text,x,y):Dibuja texto "relleno" sobre el canvas.
+            strokeText(text,x,y): Dibuja texto sin relleno sobre el canvas.
+        Dento de canvas tambien se pueden hacer tranformaciones, por ejemplo
+            traslate: permite trasladar el texto de un punto a otro
+            rotate: permite rotar el dibujo, el valor de rotacion esta en radianes
+            scale: permite cambiar el tamaño en valor de "x" y "y"
+        Observa el head donde va el script del canvas
+        -->
+        
+        <!--
+        Canvas vs SVG
+            Canvas
+                Los elementos se dibujan programaticamente
+                Los dibujos se realizan con pixeles
+                Las animaciones no estan incorporadas
+                Alto rendimiento para operaciones de dibujo basadas en pixeles
+                Dependiente de la Resolucion
+                No hay soporte para controladores de eventos
+                Puede guardar la imagen resultante como .png o .jpg
+                Muy adecuado para los juegos de graficos intensivos
+            SVG
+                Los elementos son parte del DOM de la pagina (Modelo de Objetos del Documento)
+                El dibujo se hace con vectores
+                Efectos, como animaciones con incorporadas
+                Basada en sintaxis XML estandar, que provee mejor accesibilidad
+                Independiene de la resolucion
+                Soporte para manejadores de eventos
+                No apto para apliciones de juegos
+                Es mejor para aplicaciones con areas grandes de renderizacion (por ejemplo, Google Maps)
+        -->
+        
+        <!-- 
+        HTML5 incorpora nuevas funciones a los formularios para que la experiencia del usuario sea la mejor a 
+        la hora de interactura con la pagina, de manera estructural, la manera de crear un formulario es igual
+        a HTML4 pero esta version, como dijimos añade nuevas funcionalidades, como: 
+        ++ placeholder: en los elementos "input" y "textarea" este atributo posee informacion al usuario sobre
+        que espera que se ingrese.
+        ++ autofocus: hace que el cursor se posiciones en el campo de entrada deseado cuando el formulario se
+        carga.
+        ++ required: indica que el campo marcaado con esto es necesario para enviar el formulario
+        ++ datalist: muestra una lista predefinada por el programador con opciones para un "input", para este
+        atributo se usa otro llamado "option" el cual indica cada valor de la lista
+        
+        Nuevos tipos de entrada:
+            color
+            date
+            datetime
+            datetime-local
+            email
+            month
+            number
+            range
+            search
+            tel
+            time
+            url
+            week
+        
+        Nuevos atributos de entrada:
+            autofocus
+            form
+            formaction<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>
+        -->
+        
+    </body>
+</html>
